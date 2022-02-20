@@ -3,7 +3,7 @@ import dogeMobileWallet from "../../Assets/dogecoin_mobilewallet.png"
 
 const GetStarted = () => {
     return (
-        <div className='bg-[#1c1b24] p-12 mt-12 rounded-2xl shadow-black shadow-2xl flex items-center '>
+        <div className='bg-[#1f1e29] p-12 mt-12 flex items-center '>
             <div>
                 <Image src={dogeMobileWallet} />
             </div>
