@@ -1,11 +1,19 @@
 import Image from "next/image"
 import PropTypes from "prop-types";
 
-const Button = ({imageSrc, label, hrefLink, bgColor, textColor, moreStyle}) => {
+const Button = ({ imageSrc, label, hrefLink, bgColor, textColor, moreStyle }) => {
     return (
         <button className={`p-3 ${bgColor} ${textColor} font-bold rounded-xl hover:bg-[#ecbc42] hover:shadow-md hover:shadow-[#39374d] transition ease-in hover:-translate-y-1 hover:scale-110 duration-200 mt-2 ${moreStyle} `}>
-            <a href={hrefLink} className="flex items-center">
-                { imageSrc ? <Image src={imageSrc} width={16} /> : ""} {label}
+            <a href={hrefLink} className="flex items-center my-auto">
+                {imageSrc ?
+                    <span className="items-center mr-2">
+                        <Image src={imageSrc} width={16} />
+                    </span>
+                    : ""}
+
+                <span>
+                    {label}
+                </span>
             </a>
         </button>
     )
